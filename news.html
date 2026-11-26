@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kaa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jańalıqlar — 42-mektep</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="header"></header>
+
+  <main class="section page">
+    <div class="container">
+      <h1 class="page__title" data-t="nav_news"></h1>
+      <div class="filters" id="filters" role="tablist"></div>
+      <div class="news-grid" id="news-list" aria-live="polite"></div>
+      <div class="center"><button class="btn btn--ghost" id="load-more" hidden data-t="load_more"></button></div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/school.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/news.js"></script>
+</body>
+</html>

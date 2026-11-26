@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kaa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Basqarıw paneli — 42-mektep</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+  <header class="admin-top">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand__mark">42</span>
+        <span class="brand__text"><strong data-a="title"></strong><small id="who"></small></span></a>
+      <div class="admin-top__right">
+        <span class="lang-switch" id="lang-switch"></span>
+        <a class="btn btn--ghost btn--small" href="index.html" data-a="back_site"></a>
+        <button class="btn btn--ghost btn--small" id="logout" hidden data-a="logout"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main container">
+    <div id="global-msg" class="alert" role="status" hidden></div>
+
+    <!-- Kiriw -->
+    <section id="login-view" class="card login" hidden>
+      <h1 data-a="login_title" style="font-size:1.5rem"></h1>
+      <form id="login-form" class="form" novalidate>
+        <div class="field"><label for="email" data-a="email"></label>
+          <input id="email" type="email" autocomplete="username" required></div>
+        <div class="field"><label for="password" data-a="password"></label>
+          <input id="password" type="password" autocomplete="current-password" required></div>
+        <div id="login-msg" class="alert alert--error" hidden></div>
+        <button class="btn btn--primary" type="submit" data-a="login"></button>
+      </form>
+    </section>
+
+    <!-- Basqarıw -->
+    <section id="dash-view" class="admin-grid" hidden>
+      <div class="card panel">
+        <div class="panel__head">
+          <h2 id="editor-title"></h2>
+          <button class="btn btn--ghost btn--small" id="new-btn" data-a="new_news"></button>
+        </div>
+        <form id="editor" class="form" novalidate>
+          <div class="field"><label for="f-title" data-a="f_title"></label>
+            <input id="f-title" type="text" maxlength="200" required></div>
+          <div class="row">
+            <div class="field"><label for="f-category" data-a="f_category"></label>
+              <select id="f-category"></select></div>
+            <div class="field"><label for="f-date" data-a="f_date"></label>
+              <input id="f-date" type="datetime-local" required>
+              <small data-a="f_date_hint"></small></div>
+          </div>
+          <div class="field"><label for="f-summary" data-a="f_summary"></label>
+            <input id="f-summary" type="text" maxlength="400">
+            <small data-a="f_summary_hint"></small></div>
+          <div class="field"><label for="f-body" data-a="f_body"></label>
+            <textarea id="f-body" required></textarea>
+            <small data-a="f_body_hint"></small></div>
+          <div class="field">
+            <label for="f-image" data-a="f_image"></label>
+            <div class="img-drop">
+              <img id="f-preview" alt="" hidden>
+              <input id="f-image" type="file" accept="image/jpeg,image/png,image/webp">
+              <small data-a="f_image_hint"></small>
+              <button type="button" class="btn btn--danger btn--small" id="f-remove-img" hidden data-a="remove_image"></button>
+            </div>
+          </div>
+          <label class="check"><input id="f-published" type="checkbox" checked> <span data-a="f_published"></span></label>
+          <div id="editor-msg" class="alert" hidden></div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit" id="save-btn" data-a="save"></button>
+            <button class="btn btn--ghost" type="button" id="cancel-btn" data-a="cancel"></button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card panel">
+        <div class="panel__head"><h2 data-a="news_list"></h2><span class="muted" id="count"></span></div>
+        <input class="search" id="search" type="search">
+        <ul class="admin-list" id="admin-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/school.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

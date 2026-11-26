@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="kaa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>42-mektep — Nókis</title>
+  <meta name="description" content="Nókis qalası 42-sanlı mektep: jańalıqlar, sabaq kestesi, qabıllaw hám baylanıs.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="header"></header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow" data-s="city"></p>
+          <h1 data-s="fullName"></h1>
+          <p class="hero__lead" data-s="tagline"></p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#news" data-t="hero_news"></a>
+            <a class="btn btn--ghost" href="#admission" data-t="hero_admission"></a>
+          </div>
+        </div>
+        <div class="hero__art">
+          <img id="hero-photo" alt="" hidden>
+          <div class="hero__badge" aria-hidden="true"><span>42</span></div>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="stats" id="stats"></ul>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-t="latest_news"></h2>
+          <a class="link-arrow" href="news.html"><span data-t="all_news"></span> →</a>
+        </div>
+        <div class="news-grid" id="latest-news" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="quotes" class="section quotes-band" hidden>
+      <div class="container">
+        <h2 data-t="quotes_title"></h2>
+        <div class="quotes" id="quotes-list"></div>
+        <p class="quotes__author" id="quote-author"></p>
+      </div>
+    </section>
+
+    <section id="about" class="section section--tint">
+      <div class="container about">
+        <div>
+          <h2 data-t="about_title"></h2>
+          <p class="about__text" data-s="about"></p>
+        </div>
+        <aside class="card director">
+          <p class="eyebrow" data-t="director"></p>
+          <div class="director__avatar" aria-hidden="true" id="director-initials"></div>
+          <h3 id="director-name"></h3>
+          <p class="muted" id="director-role"></p>
+          <p class="director__reception" id="director-reception"></p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="gallery" class="section" hidden>
+      <div class="container">
+        <h2 data-t="gallery_title"></h2>
+        <div class="gallery" id="gallery-list"></div>
+      </div>
+    </section>
+
+    <dialog id="lightbox" class="lightbox">
+      <form method="dialog"><button class="lightbox__close" data-t="close"></button></form>
+      <img id="lightbox-img" alt="">
+      <p id="lightbox-cap"></p>
+    </dialog>
+
+    <section id="teachers" class="section section--tint">
+      <div class="container">
+        <h2 data-t="teachers_title"></h2>
+        <ul class="teachers" id="teachers-list"></ul>
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <div class="container schedule">
+        <div>
+          <h2 data-t="schedule_title"></h2>
+          <div class="shifts" id="bells"></div>
+        </div>
+        <div id="admission" class="card admission">
+          <h2 data-t="admission_title"></h2>
+          <p data-s="admission"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section">
+      <div class="container contacts">
+        <div>
+          <h2 data-t="contacts_title"></h2>
+          <dl class="contact-list" id="contact-list"></dl>
+        </div>
+        <div class="map">
+          <iframe id="map" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/school.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
