@@ -46,7 +46,7 @@ p { margin: 0 0 1em; }
 .lang-switch button[aria-pressed="true"] { background: var(--navy); color: #fff; }
 .menu-toggle { display: none; border: 1px solid var(--line); background: #fff; font: inherit; font-weight: 700; padding: .5rem .9rem; border-radius: 10px; cursor: pointer; }
 
-@media (max-width: 960px) {
+@media (max-width: 1120px) {
   .menu-toggle { display: block; }
   .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; padding: .75rem 1.25rem 1.25rem; }
   .header.is-open .nav { display: flex; }
