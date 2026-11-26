@@ -36,6 +36,29 @@ window.SCHOOL = {
       en: "Visiting hours: Mon, Wed, Fri, 9:00–12:00"
     }
   },
+  // Direktor orınbasarları
+  deputies: [
+    {
+      name: { kaa: "Dosanova Gawhar Tajibaevna", uz: "Dosanova Gavhar Tajibayevna", en: "Gawhar Dosanova" },
+      role: { kaa: "Oqıw isleri boyınsha direktor orınbasarı", uz: "O‘quv ishlari bo‘yicha direktor o‘rinbosari", en: "Deputy Principal for Academic Affairs" },
+      reception: { kaa: "Hár kúni, 09:00–18:00", uz: "Har kuni, 09:00–18:00", en: "Daily, 9:00–18:00" }
+    },
+    {
+      name: { kaa: "Madreymov Berkinbay Aytmuratovich", uz: "Madreymov Berkinbay Aytmuratovich", en: "Berkinbay Madreymov" },
+      role: { kaa: "Oqıw isleri boyınsha direktor orınbasarı", uz: "O‘quv ishlari bo‘yicha direktor o‘rinbosari", en: "Deputy Principal for Academic Affairs" },
+      reception: { kaa: "Hár kúni, 09:00–18:00", uz: "Har kuni, 09:00–18:00", en: "Daily, 9:00–18:00" }
+    },
+    {
+      name: { kaa: "Saypova Dilbar Tilepovna", uz: "Saypova Dilbar Tilepovna", en: "Dilbar Saypova" },
+      role: { kaa: "Ruwxıylıq hám aǵartıwshılıq isleri boyınsha direktor orınbasarı", uz: "Ma’naviy-ma’rifiy ishlar bo‘yicha direktor o‘rinbosari", en: "Deputy Principal for Spiritual and Educational Affairs" },
+      reception: { kaa: "Hár kúni, 09:00–18:00", uz: "Har kuni, 09:00–18:00", en: "Daily, 9:00–18:00" }
+    },
+    {
+      name: { kaa: "Baylepesova Gulmira Azimbayevna", uz: "Baylepesova Gulmira Azimbayevna", en: "Gulmira Baylepesova" },
+      role: { kaa: "Ruwxıylıq hám aǵartıwshılıq isleri boyınsha direktor orınbasarı", uz: "Ma’naviy-ma’rifiy ishlar bo‘yicha direktor o‘rinbosari", en: "Deputy Principal for Spiritual and Educational Affairs" },
+      reception: { kaa: "Hár kúni, 09:00–18:00", uz: "Har kuni, 09:00–18:00", en: "Daily, 9:00–18:00" }
+    }
+  ],
   teachers: [
     { name: "Dlimbetov Salamat", subject: { kaa: "Informatika", uz: "Informatika", en: "Computer Science" } },
     { name: "Allaniyazova Gawhar", subject: { kaa: "Informatika", uz: "Informatika", en: "Computer Science" } },
