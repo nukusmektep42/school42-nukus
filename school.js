@@ -74,13 +74,13 @@ window.SCHOOL = {
     en: "Grade 1 admission is done by parents submitting an application directly on the emaktab.uz website."
   },
   admissionLink: "https://emaktab.uz",
-  // Bas bettegi úlken súwret hám galereya (assets/photos papkasında)
-  heroPhoto: "assets/photos/building.jpg",
+  // Bas bettegi úlken súwret hám galereya (súwret fayllar)
+  heroPhoto: "building.jpg",
   gallery: [
-    { src: "assets/photos/building.jpg", caption: { kaa: "Mektep imaratı", uz: "Maktab binosi", en: "School building" } },
-    { src: "assets/photos/hall.jpg", caption: { kaa: "Kirisiw zalı", uz: "Kirish zali", en: "Entrance hall" } },
-    { src: "assets/photos/gym-1.jpg", caption: { kaa: "Sport zalı", uz: "Sport zali", en: "Sports hall" } },
-    { src: "assets/photos/gym-2.jpg", caption: { kaa: "Sport zalı", uz: "Sport zali", en: "Sports hall" } }
+    { src: "building.jpg", caption: { kaa: "Mektep imaratı", uz: "Maktab binosi", en: "School building" } },
+    { src: "hall.jpg", caption: { kaa: "Kirisiw zalı", uz: "Kirish zali", en: "Entrance hall" } },
+    { src: "gym-1.jpg", caption: { kaa: "Sport zalı", uz: "Sport zali", en: "Sports hall" } },
+    { src: "gym-2.jpg", caption: { kaa: "Sport zalı", uz: "Sport zali", en: "Sports hall" } }
   ],
   // Prezident sózleri — tek president.uz saytındaǵı rásmiy tekstlerden alındı.
   // Túp nusqası ózbekshe (uz); kaa hám en — awdarma.
