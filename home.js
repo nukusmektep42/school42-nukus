@@ -14,13 +14,24 @@
     return "<li><strong>" + esc(s.value) + "</strong><span>" + esc(L(s.label)) + "</span></li>";
   }).join("");
 
-  // Директор
-  var dName = L(S.director.name);
-  document.getElementById("director-name").textContent = dName;
-  document.getElementById("director-role").textContent = L(S.director.role);
-  document.getElementById("director-reception").textContent = L(S.director.reception);
-  document.getElementById("director-initials").textContent =
-    dName.replace(/\[|\]/g, "").split(/\s+/).slice(0, 2).map(function (w) { return w.charAt(0); }).join("").toUpperCase();
+  // Basshılıq: direktor + orınbasarlar
+  function initials(n) {
+    return n.replace(/\[|\]/g, "").split(/\s+/).slice(0, 2).map(function (w) { return w.charAt(0); }).join("").toUpperCase();
+  }
+  var leaders = [S.director].concat(S.deputies || []);
+  document.getElementById("leaders").innerHTML = leaders.map(function (p, i) {
+    var name = L(p.name);
+    return '<article class="card leader' + (i === 0 ? " leader--main" : "") + '">' +
+      '<span class="leader__avatar" aria-hidden="true">' + esc(initials(name)) + "</span>" +
+      "<h3>" + esc(name) + "</h3>" +
+      '<p class="leader__role">' + esc(L(p.role)) + "</p>" +
+      (L(p.reception) ? '<p class="leader__time">' + esc(L(p.reception)) + "</p>" : "") +
+      "</article>";
+  }).join("");
+
+  var aboutImg = document.getElementById("about-photo");
+  var aboutSrc = (S.gallery && S.gallery[1] && S.gallery[1].src) || "";
+  if (aboutSrc) { aboutImg.src = aboutSrc; aboutImg.alt = L(S.gallery[1].caption); aboutImg.hidden = false; }
 
   document.getElementById("teachers-list").innerHTML = S.teachers.map(function (p) {
     var initials = L(p.name).replace(/\[|\]/g, "").split(/\s+/).slice(0, 2).map(function (w) { return w.charAt(0); }).join("").toUpperCase();
